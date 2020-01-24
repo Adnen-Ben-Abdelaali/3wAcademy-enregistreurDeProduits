@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercice produits PHP</title>
+  </head>
+  <body>
+    <h1>Enregisteur de produits de 3w Academy</h1>
+    <ul>
+      <?php foreach($ourProducts as $index => $value): ?>
+      <li> <?= $value[0] ?>-<?= $value[1] ?> </li>
+      <?php endforeach; ?>
+    </ul>
+    <form action="produits.php" method="post">
+      <label>ref </label><input type="text" name="reference" />
+      </br>
+      <label>Désignation</label><input type="text" name="designation" />
+      <p>type:</p>
+
+        <div>
+          <input type="radio" id="telephone" name="type" value="telephone" checked>
+          <label for="telephone">téléphone</label>
+        </div>
+
+        <div>
+          <input type="radio" id="informatique" name="type" value="informatique">
+          <label for="informatique">Informatique</label>
+        </div>
+
+        <div>
+          <input type="radio" id="electromenager" name="type" value="electromenager">
+          <label for="electromenager">électoménager</label>
+        </div>
+        <input type="submit" value="Save" />
+    </form>
+  </body>
+</html>
